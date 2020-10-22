@@ -11,7 +11,6 @@ function menu() {
         setTimeout(append, 200)
     })
 
-
     menuRemove.addEventListener('click', function () {
         menu.classList.remove('active');
 

@@ -8,7 +8,9 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
         integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
     <link rel="stylesheet" href="css/cookie.css">
+    <link rel="stylesheet" href="css/animations.css">
     <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <script src="js/cookies.js"></script>
 </head>
 
@@ -44,26 +46,36 @@
             </ul>
         </nav>
         <main>
-            <section>
-                <article class="slider"></article>
-                <div class="secondmenu">
-                    <span>Wydarzenia</span>
-                    <span>Erasmus+</span>
-                    <span>Facebook</span>
-                    <span>Matura</span>
-                    <span>Archiwum</span>
-                    <span>Harmonogram zajęć</span>
-                    <span>Ogłoszenia</span>
-                    <span>Konkursy i olimpiady</span>
-                    <span>Rekrutacja</span>
-                    <span>Kontakt</span>
-                    <span>Fotogaleria</span>
-                    <span>Dziennik elektroniczny</span>
-                    <iframe width="240" height="270" src="https://www.youtube.com/embed/s_8CsQ4zbHo" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
+            <i class="fas fa-angle-double-down"></i>
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"></div>
+                    <div class="swiper-slide"></div>
+                    <div class="swiper-slide"></div>
+                    <div class="swiper-slide"><iframe width="100%" height="100%"
+                            src="https://www.youtube.com/embed/s_8CsQ4zbHo" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe></div>
                 </div>
-            </section>
+                <!-- Add Arrows -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+            <div class="secondmenu" data-mt-duration="300">
+                <p>Przydatne <br> linki</p>
+                <span><a href="#">Wydarzenia</a></span>
+                <span><a href="#">Erasmus+</a></span>
+                <span><a href="#">Facebook</a></span>
+                <span><a href="#">Matura</a></span>
+                <span><a href="#">Archiwum</a></span>
+                <span><a href="#">Harmonogram zajęć</a></span>
+                <span><a href="#">Ogłoszenia</a></span>
+                <span><a href="#">Konkursy i olimpiady</a></span>
+                <span><a href="#">Rekrutacja</a></span>
+                <span><a href="#">Kontakt</a></span>
+                <span><a href="#">Fotogaleria</a></span>
+                <span><a href="#">Dziennik elektroniczny</a></span>
+            </div>
         </main>
         <section class="annoucements">
             <span class="announce">Ogłoszenia</span>
@@ -72,12 +84,21 @@
             <span class="event">Wydarzenia</span>
         </section>
         <footer>
-            <section class="employee"></section>
+            <section class="employee" data-target="#target"></section>
         </footer>
         <div></div>
         <i class="fas fa-bars"></i>
     </div>
     <script src="js/menu.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+    </script>
 </body>
 
 </html>
